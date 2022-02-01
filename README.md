@@ -1,7 +1,9 @@
 Automate your WordPress development workflow.
 # INSTALL 
 git clone https://github.com/petrgru/wordpress-docker
+
 cp env.config .env
+
 nano .env #change what is need password!!!!!!!!
 
 # INSTALL WORDPRESS BY CLI
