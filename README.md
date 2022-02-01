@@ -19,7 +19,9 @@ docker-compose run --rm wpcli wp core install --url=your_domain --title=Your_Blo
 docker exec -it [db] mysqldump -u [user] -p[password] [database] > [file.sql]
 
 #default config
+
 docker exec -it  mysqldump -u root -proot > zaloha.sql
+
 # BACKUP FILE SYSTEM
 tar cvfz wordpress.tar.gz build/wordpress
 
