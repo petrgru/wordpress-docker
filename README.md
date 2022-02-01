@@ -4,6 +4,8 @@ git clone https://github.com/petrgru/wordpress-docker
 
 cd wordpress-docker
 
+sudo chmod 777 -R build/wordpess
+
 cp env.config .env
 
 nano .env #change what is need password!!!!!!!!
