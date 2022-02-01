@@ -22,6 +22,10 @@ docker exec -it [db] mysqldump -u [user] -p[password] [database] > [file.sql]
 
 docker exec -it wordpress-docker_db_1 mysqldump -u root -proot wordpress > zaloha.sql
 
+# RESTORE DB WORDPRESS
+cat zaloha.sql | docker exec -i wordpress-docker_db_1 mysql -u root -proot wordpress 
+
+
 # BACKUP FILE SYSTEM
 tar cvfz wordpress.tar.gz build/wordpress
 
