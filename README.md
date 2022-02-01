@@ -23,3 +23,6 @@ tar cvfz wordpress.tar.gz build/wordpress
 
 # RESTORE FILE SYSTEM
 tar xvfz wordpress.tar.gz -C build/wordpress
+
+# CHANGE URL inside WP instance
+docker-compose run --rm wpcli wp search-replace [OLD_URL] [NEW_URL] --all-tables
