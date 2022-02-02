@@ -4,13 +4,16 @@ git clone https://github.com/petrgru/wordpress-docker
 
 cd wordpress-docker
 
-sudo chmod 777 -R build/wordpess
-
 cp env.config .env
 
 nano .env #change what is need password!!!!!!!!
 
 docker-compose build
+
+sudo chmod 777 -R build/wordpess
+
+docker-compose up -d
+
 
 # INSTALL WORDPRESS BY CLI
 docker-compose run --rm wpcli wp core install --url=your_domain --title=Your_Blog_Title --admin_user=username --admin_password=password --admin_email=your_email.com
