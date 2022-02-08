@@ -10,9 +10,9 @@ nano .env #change what is need password!!!!!!!!
 
 docker-compose build
 
-sudo chmod 777 -R build/wordpess
-
 docker-compose up -d
+
+sudo chmod 777 -R build/wordpess
 
 
 # INSTALL WORDPRESS BY CLI
@@ -33,7 +33,7 @@ cat zaloha.sql | docker exec -i wordpress-docker_db_1 mysql -u root -proot wordp
 tar cvfz wordpress.tar.gz build/wordpress
 
 # RESTORE FILE SYSTEM
-tar xvfz wordpress.tar.gz -C build/wordpress
+tar xvfz wordpress.tar.gz -C ./
 
 # CHANGE URL inside WP instance
 docker-compose run --rm wpcli wp search-replace [OLD_URL] [NEW_URL] --all-tables
