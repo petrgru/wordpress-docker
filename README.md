@@ -12,7 +12,7 @@ docker-compose build
 
 docker-compose up -d
 
-sudo chmod 777 -R build/wordpess
+sudo chmod 777 -R build/wordpress
 
 
 # INSTALL WORDPRESS BY CLI
@@ -33,7 +33,9 @@ cat zaloha.sql | docker exec -i wordpress-docker_db_1 mysql -u root -proot wordp
 tar cvfz wordpress.tar.gz build/wordpress
 
 # RESTORE FILE SYSTEM
-tar xvfz wordpress.tar.gz -C ./
+sudo tar xvfz wordpress.tar.gz -C ./
+
+sudo chmod 777 -R build/wordpress
 
 # CHANGE URL inside WP instance
 docker-compose run --rm wpcli wp search-replace [OLD_URL] [NEW_URL] --all-tables
